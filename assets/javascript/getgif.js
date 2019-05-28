@@ -7,12 +7,13 @@ var topics = ["KimKardashian", "Clapback", "bts", "flossing", "aoc"];
 function renderGifButton(array){
 
   $("#gif-buttons").empty();
+  $("#gif-input").empty();
 
   for (var i = 0; i < array.length; i++){
 
     var gifTopic = $("<button>");
     
-    gifTopic.addClass("gif-btn btn btn-secondary mx-1");
+    gifTopic.addClass("gif-btn btn btn-secondary mx-1 my-1");
 
     gifTopic.attr("gif-name", array[i]);
 
@@ -25,7 +26,7 @@ function renderGifButton(array){
 renderGifButton(topics);
 
 // on button click searches Giphy API with topic words and dynamically adds gifs to page
-$("button").on("click", function() {
+function displayGif() {
 
   $("#gifs-appear-here").empty();
   
@@ -66,6 +67,18 @@ $("button").on("click", function() {
         $("#gifs-appear-here").prepend(gifDiv);
       }
     });
+};
+
+$("#add-gif").on("click", function (event) {
+  event.preventDefault();
+    // This line grabs the input from the textbox
+  var gif = $("#gif-input").val().trim();
+
+    // Adding movie from the textbox to our array
+  topics.push(gif);
+
+    // Calling renderButtons which handles the processing of our movie array
+  renderGifButton(topics);
 });
 
 function playGif() {
@@ -84,6 +97,8 @@ function playGif() {
 };
 
 $(document).on("click", ".gif", playGif);
+
+  $(document).on("click", ".gif-btn", displayGif);
 
 
 
