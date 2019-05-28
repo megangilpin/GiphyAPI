@@ -46,15 +46,19 @@ $("button").on("click", function() {
 
       for(var i = 0; i < results.length; i++){
         var gifDiv = $("<div>");
+        gifDiv.addClass("my-2");
+        
         var rating = results[i].rating;
 
         var p = $("<p>").text("Rating: " + rating);
+        p.addClass("my-1");
 
         var gifImage = $("<img>");
         gifImage.attr("src", results[i].images.fixed_height_still.url);
         gifImage.attr("data-still", results[i].images.fixed_height_still.url)
         gifImage.attr("data-animate", results[i].images.fixed_height.url);
         gifImage.attr("data-state", "still");
+        gifImage.addClass("gif");
 
         gifDiv.append(p);
         gifDiv.append(gifImage);
@@ -64,6 +68,22 @@ $("button").on("click", function() {
     });
 });
 
+function playGif() {
+  event.preventDefault();
+  
+  var state = $(this).attr("data-state");
+  console.log(state);
+
+  if (state === "still") {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+  }
+};
+
+$(document).on("click", ".gif", playGif);
 
 
 
