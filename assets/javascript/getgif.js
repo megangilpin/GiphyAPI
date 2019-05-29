@@ -12,11 +12,8 @@ function renderGifButton(array){
   for (var i = 0; i < array.length; i++){
 
     var gifTopic = $("<button>");
-    
     gifTopic.addClass("gif-btn btn mx-1 my-1");
-
     gifTopic.attr("gif-name", array[i]);
-
     gifTopic.text(array[i]);
 
     $("#gif-buttons").append(gifTopic);
@@ -98,7 +95,7 @@ function playGif() {
 
 $(document).on("click", ".gif", playGif);
 
-  $(document).on("click", ".gif-btn", displayGif);
+$(document).on("click", ".gif-btn", displayGif);
 
 
 
