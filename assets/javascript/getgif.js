@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
   // array of Topics
-var topics = ["KimKardashian", "Clapback", "bts", "flossing", "aoc"];
+var topics = ["Kim Kardashian", "Clapback", "bts", "flossing", "aoc"];
 
 // Renders index of an array into a button
 function renderGifButton(array){
 
   $("#gif-buttons").empty();
-  $("#gif-input").empty();
+
 
   for (var i = 0; i < array.length; i++){
 
@@ -30,7 +30,7 @@ function displayGif() {
 
   $("#gifs-appear-here").empty();
   
-  var topic = $(this).attr("gif-name");
+  var topic = $(this).attr("gif-name").trim();
   console.log(topic);
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     topic + "&api_key=18XzYcs4C3bA4uNc8XTNW0vmhDkdze5v&limit=10";
@@ -73,7 +73,7 @@ $("#add-gif").on("click", function (event) {
   event.preventDefault();
     // This line grabs the input from the textbox
   var gif = $("#gif-input").val().trim();
-
+  $("#gif-input").val("");
     // Adding movie from the textbox to our array
   topics.push(gif);
 
