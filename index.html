@@ -9,6 +9,8 @@
     <!-- CSS Links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt|Shadows+Into+Light+Two&display=swap" rel="stylesheet">
 
     <!-- jquery Link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -23,18 +25,28 @@
   <section class="container mt-5">
 
     <!-- Jumbotron that contains the buttons -->
-    <div class="row jumbotron my-3 p-4">
+    <div class="row jumbotron p-4">
       <div class="col-12">
 
         <div class="row justify-content-center">
-          <h4>Pop Culture Gifs</h4>
+          <h3 class="mb-3">Pop Culture Gifs</h3>
+          <p class="text-center mb-3 instructions">Click the buttons below for some pop culture gif-ucation. Don't see the what you need? Look for the hotdog fairy to show you the way to enlightenment!</p>
         </div>
 
         <div class="row ">
           <div id="gif-buttons"></div>
         </div>
-
       </div>
+
+      <iframe src="https://giphy.com/embed/xT9IgzvnOyNDYnxeHS" width="280" height="280" frameBorder="0" class="sticker-one"
+        allowFullScreen>
+      </iframe>
+      <iframe src="https://giphy.com/embed/xT9IgzvnOyNDYnxeHS" width="380" height="380" frameBorder="0" class="sticker-three"
+        allowFullScreen>
+      </iframe>
+      <iframe src="https://giphy.com/embed/xUPGcfX9rag7PiNyuY" width="180" height="161" frameBorder="0" class="sticker-four"
+        allowFullScreen>
+      </iframe>
     </div>
 
     <div class="container my-5">
@@ -44,9 +56,8 @@
           <div class="m-2" id="gifs-appear-here"></div>
         </div>
 
-        <div class="col-6 float-right">
+        <div class="col-6">
           <div class="card" style="width: 18rem;">
-            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
             <div class="card-body">
               <form id="gif-form">
                 <label for="gif-input">New topic, who dis</label>
@@ -58,6 +69,10 @@
               </form>
           </div>
         </div>
+
+        <iframe src="https://giphy.com/embed/3o6gE51uXycrKW6D84" width="120" height="180" frameBorder="0" class="sticker-two"
+          allowFullScreen>
+        </iframe>
 
       </div>
     </div>

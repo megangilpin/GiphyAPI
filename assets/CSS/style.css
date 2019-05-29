@@ -1,0 +1,77 @@
+body{
+  background-image: url("../Images/wormz.png");
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: 1.5px;
+}
+
+.instructions{
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 15px;
+}
+
+.gif-btn{
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 25px;
+  background-color: rgb(204, 255, 122);
+  font-display: black;
+  border-color:  rgba(170, 245, 49, 0.913);
+  border-style: solid;
+  border-width: 1px;
+}
+
+.gif-btn:active {
+  background-color:fuchsia;
+}
+
+.jumbotron{
+  background-color: rgb(255, 255, 255);
+  border-color: fuchsia;
+  border-style: solid;
+  border-width: 5px;
+  position: relative;
+  margin: 100px;
+}
+
+.card{
+  border-color: fuchsia;
+  border-style: solid;
+  border-width: 5px;
+  margin: 50px;
+  float: right;
+}
+
+#add-gif{
+  background-color: cyan;
+  border-color:  rgb(6, 230, 255);
+  border-style: solid;
+  border-width: 1px;
+}
+
+.gif{
+  border-color: black;
+  border-width: 1px;
+}
+
+.sticker-one{
+  position: absolute;
+  right: -200px;
+  top: -115px;
+}
+
+.sticker-two{
+  position: absolute;
+  right: 10px;
+  top: -75px;
+}
+
+.sticker-three{
+  position: absolute;
+  top: 50px;
+  left: -300px;
+}
+
+.sticker-four{
+  position: absolute;
+  left: 10px;
+  top: -115px;
+}

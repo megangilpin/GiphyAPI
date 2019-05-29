@@ -13,7 +13,7 @@ function renderGifButton(array){
 
     var gifTopic = $("<button>");
     
-    gifTopic.addClass("gif-btn btn btn-secondary mx-1 my-1");
+    gifTopic.addClass("gif-btn btn mx-1 my-1");
 
     gifTopic.attr("gif-name", array[i]);
 
@@ -59,7 +59,7 @@ function displayGif() {
         gifImage.attr("data-still", results[i].images.fixed_height_still.url)
         gifImage.attr("data-animate", results[i].images.fixed_height.url);
         gifImage.attr("data-state", "still");
-        gifImage.addClass("gif");
+        gifImage.addClass("gif mb-4");
 
         gifDiv.append(p);
         gifDiv.append(gifImage);
