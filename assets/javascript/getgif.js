@@ -7,8 +7,7 @@ var topics = ["Kim Kardashian", "Clapback", "bts", "flossing", "aoc"];
 function renderGifButton(array){
 
   $("#gif-buttons").empty();
-
-
+  
   for (var i = 0; i < array.length; i++){
 
     var gifTopic = $("<button>");
@@ -71,19 +70,22 @@ $("#add-gif").on("click", function (event) {
     // This line grabs the input from the textbox
   var gif = $("#gif-input").val().trim();
   $("#gif-input").val("");
-    // Adding movie from the textbox to our array
+    // Adding topic from the textbox to our array
   topics.push(gif);
 
-    // Calling renderButtons which handles the processing of our movie array
+    // Calling renderGifButtons which handles the processing of our topics array
   renderGifButton(topics);
 });
 
+// function that plays the gif then stops the gif
 function playGif() {
   event.preventDefault();
   
+  // variable of the data-state of the gif that was clicked that will be referenced to change the displayed gif to the one that is not still
   var state = $(this).attr("data-state");
   console.log(state);
 
+  // if/then statement that says if the data-sate is still then change the displayed gif to the one is not still and change the data-state attribute to be "animate", else statement says if the data-state is animate then change the gif displayed to be the still gif.
   if (state === "still") {
     $(this).attr("src", $(this).attr("data-animate"));
     $(this).attr("data-state", "animate");
@@ -93,10 +95,10 @@ function playGif() {
   }
 };
 
+// listens for a click on the gif that will run the function to play the function
 $(document).on("click", ".gif", playGif);
 
+// listens for a click on the gif-btns that will run the function to call the ajax
 $(document).on("click", ".gif-btn", displayGif);
-
-
 
 })
