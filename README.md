@@ -3,7 +3,7 @@
 
 ## Overview
 
-References the Giphy API to dynamically create gifs on the page. 
+References the Giphy API then dynmically displays the gifs on the page. 
 
 ## Functionality Breakdown
 
