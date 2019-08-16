@@ -12,7 +12,7 @@ User can click on topic buttons that will call the gipy API, then dynamically di
 ## Technical Approach
 
 1. Became familiar with the Giphy API
-   1. Aquire key to access their API data
+   1. Aquire a key to accaess their API data
    1. Undertand the call parameters for the Giphy API
    1. Familarize with the resulting JSON when making a call to the Giphy API
 1. Created an array of initial "topics" call topics
