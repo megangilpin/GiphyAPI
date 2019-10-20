@@ -1,7 +1,7 @@
 # GiphyAPI 	:clapper:
  https://megangilpin.github.io/GiphyAPI/
 
- ![Giphy Demo](demo/GiphyApi.gif)
+ ![Giphy Demo](demo/giphyapimedium.gif)
 
 ## Overview
 
