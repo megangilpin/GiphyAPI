@@ -1,13 +1,17 @@
 # GiphyAPI 	:clapper:
  https://megangilpin.github.io/GiphyAPI/
 
+ ![Giphy Demo](demo/GiphyApi.gif)
+
 ## Overview
 
 References the Giphy API then dynmically displays the gifs on the page. 
 
 ## Functionality Breakdown
 
-User can click on topic buttons that will call the gipy API, then dynamically display giphys based on button topic. Page includes input form for the user to add a topic of their choice that can later be used for the Giphy API to reference inorder to dynamically create the gifs on the page. Added funcitnality of on click play for each gif.
+Click on any topic buttons at the top of the page to see a list of gifs relating to that topic appear.  Click a gif to see it start playing, click again to stop the gif. 
+
+Add new topic buttons by entering your topic of choice into the input box and hitting the "Okuuurr!" button.
 
 ## Technology Used
 - AJAX
